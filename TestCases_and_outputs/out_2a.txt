@@ -1,0 +1,181 @@
+Please input the file pathname: 2a.txt
+
+> startNewDay 03-Jan-2021
+
+> register 002 jason
+Done.
+
+> register 003 kit
+Done.
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+002  jason     3-Jan-2021    0           0         
+003  kit       3-Jan-2021    0           0         
+
+> arrive I1 3D_Scanner
+Done.
+
+> arrive I2 Smart_Glasses
+Done.
+
+> arrive I3 Robot_Astro        
+Done.
+
+> arrive I4 Laser_Keyboard
+Done.
+
+> arrive I5 Dome_Camera    
+Done.
+
+> arrive I6 3D_Printer        
+Done.
+
+> arrive I7 XBox          
+Done.
+
+> arrive I8 Apple_Watch
+Done.
+
+> arrive I9 Drone     
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Available
+I3   Robot_Astro         3-Jan-2021  Available
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Available
+I6   3D_Printer          3-Jan-2021  Available
+I7   XBox                3-Jan-2021  Available
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> checkout 003 I1
+Done.
+
+> checkout 003 I4
+Done.
+
+> checkout 003 I5
+Done.
+
+> checkout 003 I6
+Done.
+
+> checkout 003 I7
+Done.
+
+> checkout 003 I8
+Done.
+
+> checkout 003 I9
+Loan quota exceeded.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I2   Smart_Glasses       3-Jan-2021  Available
+I3   Robot_Astro         3-Jan-2021  Available
+I4   Laser_Keyboard      3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I5   Dome_Camera         3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I6   3D_Printer          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I7   XBox                3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I8   Apple_Watch         3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I9   Drone               3-Jan-2021  Available
+
+> checkin 003 I8
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I2   Smart_Glasses       3-Jan-2021  Available
+I3   Robot_Astro         3-Jan-2021  Available
+I4   Laser_Keyboard      3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I5   Dome_Camera         3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I6   3D_Printer          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I7   XBox                3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> undo
+
+> checkout 003 I9
+Loan quota exceeded.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I2   Smart_Glasses       3-Jan-2021  Available
+I3   Robot_Astro         3-Jan-2021  Available
+I4   Laser_Keyboard      3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I5   Dome_Camera         3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I6   3D_Printer          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I7   XBox                3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I8   Apple_Watch         3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I9   Drone               3-Jan-2021  Available
+
+> checkin 003 I8
+Done.
+
+> undo
+
+> redo
+
+> checkout 003 I9
+Done.
+
+> checkout 003 I8
+Loan quota exceeded.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I2   Smart_Glasses       3-Jan-2021  Available
+I3   Robot_Astro         3-Jan-2021  Available
+I4   Laser_Keyboard      3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I5   Dome_Camera         3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I6   3D_Printer          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I7   XBox                3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+
+> checkin 002 I5
+The item is not borrowed by this member.
+
+> checkin 003 I5
+Done.
+
+> checkout 003 I8
+Done.
+
+> checkin 003 I6
+Done.
+
+> checkout 002 I7
+Item not available.
+
+> checkin 003 I7
+Done.
+
+> checkout 002 I7
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I2   Smart_Glasses       3-Jan-2021  Available
+I3   Robot_Astro         3-Jan-2021  Available
+I4   Laser_Keyboard      3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I5   Dome_Camera         3-Jan-2021  Available
+I6   3D_Printer          3-Jan-2021  Available
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I8   Apple_Watch         3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+I9   Drone               3-Jan-2021  Borrowed by 003 kit on 3-Jan-2021 
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+002  jason     3-Jan-2021    1           0         
+003  kit       3-Jan-2021    4           0         

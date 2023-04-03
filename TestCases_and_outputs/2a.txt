@@ -1,0 +1,54 @@
+startNewDay 03-Jan-2021
+
+register 002 jason
+register 003 kit
+
+listMembers
+
+arrive I1 3D_Scanner
+arrive I2 Smart_Glasses
+arrive I3 Robot_Astro        
+arrive I4 Laser_Keyboard
+arrive I5 Dome_Camera    
+arrive I6 3D_Printer        
+arrive I7 XBox          
+arrive I8 Apple_Watch
+arrive I9 Drone     
+listItems
+
+checkout 003 I1
+checkout 003 I4
+checkout 003 I5
+checkout 003 I6
+checkout 003 I7
+checkout 003 I8
+checkout 003 I9
+listItems
+
+checkin 003 I8
+listItems
+
+undo
+checkout 003 I9
+listItems
+
+checkin 003 I8
+undo
+redo
+checkout 003 I9
+checkout 003 I8
+listItems
+
+checkin 002 I5
+checkin 003 I5
+checkout 003 I8
+
+checkin 003 I6
+checkout 002 I7
+checkin 003 I7
+checkout 002 I7
+
+listItems
+
+listMembers
+

@@ -1,0 +1,102 @@
+Please input the file pathname: 1d.txt
+
+> startNewDay 03-Jan-2021
+
+> register 001 helena
+Done.
+
+> register 002 jason
+Done.
+
+> undo
+
+> undo
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+
+> redo
+
+> redo
+
+> redo
+Nothing to redo.
+
+> startNewDay 06-Jan-2021
+Done.
+
+> register 003 kit
+Done.
+
+> register 004 karen
+Done.
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           0         
+002  jason     3-Jan-2021    0           0         
+003  kit       6-Jan-2021    0           0         
+004  karen     6-Jan-2021    0           0         
+
+> arrive I1 3D_Scanner
+Done.
+
+> arrive I2 Smart_Glasses
+Done.
+
+> undo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          6-Jan-2021  Available
+
+> redo
+
+> startNewDay 07-Jan-2021
+Done.
+
+> arrive I3 Robot_Astro        
+Done.
+
+> arrive I4 Laser_Keyboard
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          6-Jan-2021  Available
+I2   Smart_Glasses       6-Jan-2021  Available
+I3   Robot_Astro         7-Jan-2021  Available
+I4   Laser_Keyboard      7-Jan-2021  Available
+
+> checkout 002 I2
+Done.
+
+> startNewDay 08-Jan-2021
+Done.
+
+> checkout 002 I3
+Done.
+
+> undo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          6-Jan-2021  Available
+I2   Smart_Glasses       6-Jan-2021  Borrowed by 002 jason on 7-Jan-2021 
+I3   Robot_Astro         7-Jan-2021  Available
+I4   Laser_Keyboard      7-Jan-2021  Available
+
+> redo
+
+> startNewDay 09-Jan-2021
+Done.
+
+> checkout 003 I4
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          6-Jan-2021  Available
+I2   Smart_Glasses       6-Jan-2021  Borrowed by 002 jason on 7-Jan-2021 
+I3   Robot_Astro         7-Jan-2021  Borrowed by 002 jason on 8-Jan-2021 
+I4   Laser_Keyboard      7-Jan-2021  Borrowed by 003 kit on 9-Jan-2021 

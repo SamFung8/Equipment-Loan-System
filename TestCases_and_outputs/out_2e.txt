@@ -1,0 +1,246 @@
+Please input the file pathname: 2e.txt
+
+> startNewDay 03-Jan-2021
+
+> register 001 helena
+Done.
+
+> register 002 jason
+Done.
+
+> register 003 kit
+Done.
+
+> register 004 karen
+Done.
+
+> arrive I1 3D_Scanner
+Done.
+
+> arrive I2 Smart_Glasses
+Done.
+
+> arrive I3 Robot_Astro        
+Done.
+
+> checkout 001 I1
+Done.
+
+> checkout 001 I2
+Done.
+
+> request 002 I1
+Done. This request is no. 1 in the queue.
+
+> request 002 I2
+Done. This request is no. 1 in the queue.
+
+> request 003 I2
+Done. This request is no. 2 in the queue.
+
+> request 004 I2
+Done. This request is no. 3 in the queue.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 3 request(s): 002 003 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    2           0         
+002  jason     3-Jan-2021    0           2         
+003  kit       3-Jan-2021    0           1         
+004  karen     3-Jan-2021    0           1         
+
+> cancelRequest 003 I2
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 2 request(s): 002 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    2           0         
+002  jason     3-Jan-2021    0           2         
+003  kit       3-Jan-2021    0           0         
+004  karen     3-Jan-2021    0           1         
+
+> undo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 3 request(s): 002 003 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    2           0         
+002  jason     3-Jan-2021    0           2         
+003  kit       3-Jan-2021    0           1         
+004  karen     3-Jan-2021    0           1         
+
+> redo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 2 request(s): 002 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    2           0         
+002  jason     3-Jan-2021    0           2         
+003  kit       3-Jan-2021    0           0         
+004  karen     3-Jan-2021    0           1         
+
+> undo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 3 request(s): 002 003 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    2           0         
+002  jason     3-Jan-2021    0           2         
+003  kit       3-Jan-2021    0           1         
+004  karen     3-Jan-2021    0           1         
+
+> checkin 001 I2
+Item [I2 Smart_Glasses] is ready for pick up by [002 jason].  On hold due on 6-Jan-2021.
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  On holdshelf for 002 jason until 6-Jan-2021 + 2 request(s): 003 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    1           0         
+002  jason     3-Jan-2021    0           1         
+003  kit       3-Jan-2021    0           1         
+004  karen     3-Jan-2021    0           1         
+
+> cancelRequest 003 I2
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  On holdshelf for 002 jason until 6-Jan-2021 + 1 request(s): 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    1           0         
+002  jason     3-Jan-2021    0           1         
+003  kit       3-Jan-2021    0           0         
+004  karen     3-Jan-2021    0           1         
+
+> undo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  On holdshelf for 002 jason until 6-Jan-2021 + 2 request(s): 003 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    1           0         
+002  jason     3-Jan-2021    0           1         
+003  kit       3-Jan-2021    0           1         
+004  karen     3-Jan-2021    0           1         
+
+> redo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  On holdshelf for 002 jason until 6-Jan-2021 + 1 request(s): 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    1           0         
+002  jason     3-Jan-2021    0           1         
+003  kit       3-Jan-2021    0           0         
+004  karen     3-Jan-2021    0           1         
+
+> cancelRequest 003 I2
+Request record is not found.
+
+> cancelRequest 003 I0
+Item not found.
+
+> cancelRequest 005 I2
+Member not found.
+
+> cancelRequest 002 I2
+Request record is not found.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 002 
+I2   Smart_Glasses       3-Jan-2021  On holdshelf for 002 jason until 6-Jan-2021 + 1 request(s): 004 
+I3   Robot_Astro         3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    1           0         
+002  jason     3-Jan-2021    0           1         
+003  kit       3-Jan-2021    0           0         
+004  karen     3-Jan-2021    0           1         
+
+> arrive I4 Laser_Keyboard
+Done.
+
+> arrive I5 Dome_Camera    
+Done.
+
+> checkout 001 I4
+Done.
+
+> checkout 001 I5
+Done.
+
+> request 003 I1
+Done. This request is no. 2 in the queue.
+
+> request 003 I2
+Done. This request is no. 2 in the queue.
+
+> request 003 I3
+The item is currently available.
+
+> request 003 I4
+Done. This request is no. 1 in the queue.
+
+> request 003 I5
+Item request quota exceeded.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 2 request(s): 002 003 
+I2   Smart_Glasses       3-Jan-2021  On holdshelf for 002 jason until 6-Jan-2021 + 2 request(s): 004 003 
+I3   Robot_Astro         3-Jan-2021  Available
+I4   Laser_Keyboard      3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 + 1 request(s): 003 
+I5   Dome_Camera         3-Jan-2021  Borrowed by 001 helena on 3-Jan-2021 
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    3           0         
+002  jason     3-Jan-2021    0           1         
+003  kit       3-Jan-2021    0           3         
+004  karen     3-Jan-2021    0           1         

@@ -1,0 +1,57 @@
+startNewDay 03-Jan-2021
+
+register 001 helena 
+register 002 jason
+
+listMembers
+
+startNewDay 06-Jan-2021
+register 003 kit
+register 001 karen
+register 002 karen
+register 003 karen
+register 004 karen
+
+listMembers
+
+arrive I1 3D_Scanner
+arrive I2 Smart_Glasses
+
+startNewDay 07-Jan-2021
+arrive I3 Robot_Astro        
+arrive I1 Laser_Keyboard
+arrive I2 Laser_Keyboard
+arrive I3 Laser_Keyboard
+arrive I4 Laser_Keyboard
+
+listItems
+
+checkout 002 I2
+
+startNewDay 08-Jan-2021 
+
+checkout 002 I3
+checkout 003 I3
+
+startNewDay 09-Jan-2021 
+checkout 003 I4
+checkout 005 I1
+checkout 002 I5
+
+listItems
+
+arrive I5 Dome_Camera    
+arrive I6 3D_Printer        
+arrive I7 XBox          
+arrive I8 Apple_Watch
+arrive I9 Drone     
+
+listItems
+
+checkout 002 I5
+checkout 002 I6
+checkout 002 I7
+checkout 002 I8
+checkout 002 I9
+listItems
+

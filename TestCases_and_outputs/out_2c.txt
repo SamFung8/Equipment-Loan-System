@@ -1,0 +1,255 @@
+Please input the file pathname: 2c.txt
+
+> startNewDay 03-Jan-2021
+
+> register 001 helena
+Done.
+
+> register 002 jason
+Done.
+
+> register 003 kit
+Done.
+
+> register 004 karen
+Done.
+
+> arrive I1 3D_Scanner
+Done.
+
+> arrive I2 Smart_Glasses
+Done.
+
+> arrive I3 Robot_Astro        
+Done.
+
+> arrive I4 Laser_Keyboard
+Done.
+
+> arrive I5 Dome_Camera    
+Done.
+
+> arrive I6 3D_Printer        
+Done.
+
+> arrive I7 XBox          
+Done.
+
+> arrive I8 Apple_Watch
+Done.
+
+> arrive I9 Drone     
+Done.
+
+> checkout 002 I2
+Done.
+
+> checkout 002 I3
+Done.
+
+> checkout 002 I5
+Done.
+
+> checkout 002 I6
+Done.
+
+> checkout 002 I7
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I3   Robot_Astro         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I6   3D_Printer          3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           0         
+002  jason     3-Jan-2021    5           0         
+003  kit       3-Jan-2021    0           0         
+004  karen     3-Jan-2021    0           0         
+
+> request 001 I5
+Done. This request is no. 1 in the queue.
+
+> request 001 I6
+Done. This request is no. 1 in the queue.
+
+> request 001 I7
+Done. This request is no. 1 in the queue.
+
+> request 004 I5
+Done. This request is no. 2 in the queue.
+
+> request 004 I6
+Done. This request is no. 2 in the queue.
+
+> request 003 I5
+Done. This request is no. 3 in the queue.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I3   Robot_Astro         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 3 request(s): 001 004 003 
+I6   3D_Printer          3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 004 
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 001 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           3         
+002  jason     3-Jan-2021    5           0         
+003  kit       3-Jan-2021    0           1         
+004  karen     3-Jan-2021    0           2         
+
+> undo
+
+> undo
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I3   Robot_Astro         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 004 
+I6   3D_Printer          3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 001 
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 001 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           3         
+002  jason     3-Jan-2021    5           0         
+003  kit       3-Jan-2021    0           0         
+004  karen     3-Jan-2021    0           1         
+
+> redo
+
+> request 003 I2
+Done. This request is no. 1 in the queue.
+
+> redo
+Nothing to redo.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 003 
+I3   Robot_Astro         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 004 
+I6   3D_Printer          3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 004 
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 001 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           3         
+002  jason     3-Jan-2021    5           0         
+003  kit       3-Jan-2021    0           1         
+004  karen     3-Jan-2021    0           2         
+
+> request 003 I5
+Done. This request is no. 3 in the queue.
+
+> request 003 I7
+Done. This request is no. 2 in the queue.
+
+> request 003 I3
+Item request quota exceeded.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 003 
+I3   Robot_Astro         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 3 request(s): 001 004 003 
+I6   3D_Printer          3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 004 
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 003 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           3         
+002  jason     3-Jan-2021    5           0         
+003  kit       3-Jan-2021    0           3         
+004  karen     3-Jan-2021    0           2         
+
+> undo
+
+> request 003 I3
+Done. This request is no. 1 in the queue.
+
+> request 003 I7
+Item request quota exceeded.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 003 
+I3   Robot_Astro         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 003 
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 3 request(s): 001 004 003 
+I6   3D_Printer          3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 004 
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 001 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           3         
+002  jason     3-Jan-2021    5           0         
+003  kit       3-Jan-2021    0           3         
+004  karen     3-Jan-2021    0           2         
+
+> request 005 I1
+Member not found.
+
+> request 003 I0
+Item not found.
+
+> request 004 I5
+The same member has already requested the item.
+
+> request 001 I3
+Item request quota exceeded.
+
+> request 002 I2
+The item is already borrowed by the same member.
+
+> request 002 I1
+The item is currently available.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 003 
+I3   Robot_Astro         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 003 
+I4   Laser_Keyboard      3-Jan-2021  Available
+I5   Dome_Camera         3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 3 request(s): 001 004 003 
+I6   3D_Printer          3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 2 request(s): 001 004 
+I7   XBox                3-Jan-2021  Borrowed by 002 jason on 3-Jan-2021 + 1 request(s): 001 
+I8   Apple_Watch         3-Jan-2021  Available
+I9   Drone               3-Jan-2021  Available
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           3         
+002  jason     3-Jan-2021    5           0         
+003  kit       3-Jan-2021    0           3         
+004  karen     3-Jan-2021    0           2         

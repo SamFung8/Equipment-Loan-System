@@ -1,0 +1,19 @@
+startNewDay 03-Jan-2021
+
+register 001 helena 
+register 002 jason
+
+listMembers
+
+arrive I1 3D_Scanner
+arrive I2 Smart_Glasses
+
+listItems
+
+startNewDay 07-Jan-2021
+checkout 002 I2
+
+startNewDay 08-Jan-2021 
+checkout 002 I1
+
+listItems

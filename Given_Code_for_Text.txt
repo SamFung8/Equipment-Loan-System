@@ -1,0 +1,58 @@
+Commands:
+=========
+"arrive"
+"cancelRequest"
+"checkin"
+"checkout"
+"listItems"
+"listMembers"
+"redo"
+"register"
+"request"
+"startNewDay"
+"undo" 
+
+Exception Messages:
+===================
+"Member ID already in use: " + _____________ + " " + _______________ //id and name
+"Item ID already in use: " + _____________ + " " + _______________ //id and name
+"Member not found."
+"Item not found."  
+"Item not available."  
+"Loan quota exceeded."
+"The item is not borrowed by this member."
+
+"The item is currently available."
+"The item is already borrowed by the same member."
+"The same member has already requested the item." 
+"Item request quota exceeded."
+"Request record is not found." 
+
+"Insufficient command arguments."
+"Unknown command - ignored."
+
+Heading and listing
+===================
+return String.format("%-5s%-9s%11s%11s%13s", "ID", "Name", "Join Date ", "#Borrowed", "#Requested"); 
+return String.format("%-5s%-9s%11s%7d%13d", id, name, ..);  
+
+return String.format("%-5s%-17s%11s   %s", "ID", "Name", "  Arrival  ", "Status");  
+return String.format("%-5s%-17s%11s   %s", id, name, arrDate, ...);  
+
+Status
+===================
+"Available"
+"Borrowed by " + ________ + " on " + ___________//id, name, borrow date 
+"On holdshelf for " + ________ + " until " + ___________//id, name, onhold due date
+"+ " + ________ + " request(s): " + ________  //count and member IDs in queue
+
+Others
+===================
+ "On hold period is over for %s.",  
+ "Sorry. %s please ignore the pick up notice for %s.",  
+ System.out.print("Please input the file pathname: ");  
+ System.out.printf("Item [%s] is ready for pick up by [%s].  On hold due on %s.\n",  
+ System.out.println("Cannot create one more system date instance.");  
+ System.out.println("Done. This request is no. " + ____ + " in the queue.");  
+ System.out.println("Nothing to redo.");  
+ System.out.println("Nothing to undo.");  

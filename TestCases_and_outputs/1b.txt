@@ -1,0 +1,15 @@
+startNewDay 03-Jan-2021
+
+arrive I1 3D_Scanner
+arrive I2 Smart_Glasses
+
+listItems
+
+startNewDay 07-Jan-2021
+arrive I3 Robot_Astro        
+arrive I1 Laser_Keyboard
+arrive I2 Laser_Keyboard
+arrive I3 Laser_Keyboard
+arrive I4 Laser_Keyboard
+
+listItems

@@ -1,0 +1,39 @@
+Please input the file pathname: 1b.txt
+
+> startNewDay 03-Jan-2021
+
+> arrive I1 3D_Scanner
+Done.
+
+> arrive I2 Smart_Glasses
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Available
+
+> startNewDay 07-Jan-2021
+Done.
+
+> arrive I3 Robot_Astro        
+Done.
+
+> arrive I1 Laser_Keyboard
+Item ID already in use: I1 3D_Scanner
+
+> arrive I2 Laser_Keyboard
+Item ID already in use: I2 Smart_Glasses
+
+> arrive I3 Laser_Keyboard
+Item ID already in use: I3 Robot_Astro        
+
+> arrive I4 Laser_Keyboard
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Available
+I3   Robot_Astro         7-Jan-2021  Available
+I4   Laser_Keyboard      7-Jan-2021  Available

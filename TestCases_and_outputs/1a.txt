@@ -1,0 +1,15 @@
+startNewDay 03-Jan-2021
+
+register 001 helena 
+register 002 jason
+
+listMembers
+
+startNewDay 06-Jan-2021
+register 003 kit
+register 001 karen
+register 002 karen
+register 003 karen
+register 004 karen
+
+listMembers

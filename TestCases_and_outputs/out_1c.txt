@@ -1,0 +1,42 @@
+Please input the file pathname: 1c.txt
+
+> startNewDay 03-Jan-2021
+
+> register 001 helena
+Done.
+
+> register 002 jason
+Done.
+
+> listMembers
+ID   Name      Join Date   #Borrowed   #Requested  
+001  helena    3-Jan-2021    0           0         
+002  jason     3-Jan-2021    0           0         
+
+> arrive I1 3D_Scanner
+Done.
+
+> arrive I2 Smart_Glasses
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Available
+I2   Smart_Glasses       3-Jan-2021  Available
+
+> startNewDay 07-Jan-2021
+Done.
+
+> checkout 002 I2
+Done.
+
+> startNewDay 08-Jan-2021
+Done.
+
+> checkout 002 I1
+Done.
+
+> listItems
+ID   Name                Arrival     Status
+I1   3D_Scanner          3-Jan-2021  Borrowed by 002 jason on 8-Jan-2021 
+I2   Smart_Glasses       3-Jan-2021  Borrowed by 002 jason on 7-Jan-2021 
